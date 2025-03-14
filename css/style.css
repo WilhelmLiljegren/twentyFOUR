@@ -1,18 +1,20 @@
+
 *{
-    box-sizing: border-box;
+    box-sizin
+    g: border-box;
     padding: 0;
     margin: 0;
     
 }
-#wrapper{
+/*#wrapper{
 row-gap: 5px;
 column-gap: 5px;
 background-color: white;
 display: grid;
-grid-template-columns: 26vw 26vw 26vw 20vw;
-grid-template-rows: 10vh 15vh 65vh 10vh 20vh 10vh 10vh;
-width: 1440px;
-height: 3200px;
+grid-template-columns: 3fr 3fr 3fr 2fr;
+grid-template-rows: 1fr 1.5fr 6.5fr 1fr 2fr 1fr 1fr;
+max-width: 1440px;
+max-height: 3200px;
 grid-template-areas: 
 "hd hd hd nv"
 "hd hd hd hd"
@@ -22,15 +24,27 @@ grid-template-areas:
 "bl bl i2 i2"
 "ft ft ft ft";
 }
-
-#header{
+*/
+#wrapper{
+display: grid;
+background-color: aliceblue;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 3fr 3fr 1fr;
+grid-template-areas: 
+"hd hd hd nv"
+"hd hd hd nv"
+"i1 i1 a1 a1"
+"a2 a2 i2 i2"
+"ft ft ft ft";
+}
+h1{
 grid-area: hd;
 font-size: xx-large;
 text-align: center;
 background-color: chartreuse;
 }
 
-#nav{
+nav{
 background-color: aqua;
 grid-area: nv;
 }
@@ -50,4 +64,14 @@ background-color:darkmagenta;
 #a2{
 grid-area: a2;
 background-color: crimson;
+}
+footer{
+grid-area: ft;
+background-color: black;
+display: grid;
+justify-content: stretch;
+
+}
+img{
+    align-self: center;
 }

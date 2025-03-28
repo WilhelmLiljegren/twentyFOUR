@@ -7,7 +7,7 @@
 }
 #wrapper{
 display: grid;
-background-color: aliceblue;
+background-color: black;
 grid-template-columns: 25vw 25vw 30vw 20vw;
 grid-template-rows: 10vh 15vh 55vh 30vh 10vh;
 grid-gap: 10px;
@@ -19,14 +19,15 @@ grid-template-areas:
 "ft ft ft ft"
 }
 h1{
+color: white;
 grid-area: hd;
 font-size: xx-large;
 text-align: center;
-background-color: chartreuse;
+background-color: black;
 }
 
 nav{
-background-color: aqua;
+background-color: black;
 grid-area: nv;
 }
 img{
@@ -34,25 +35,31 @@ img{
 }
 
 #i1{
+border-radius: 40%;
 grid-area: i1;
 display: flex;
 align-items: center;
+height: 70vh;
 }
 #i2{
+border-radius: 40%;
 grid-area: i2;
-object-fit: fill;
-width: 50vw;
-height: 30vh;
+height: 70vh;
+display: flex;
+align-items: center;
 }
 
 #a1{
 grid-area: a1;
-background-color:darkmagenta;
 }
-
+article{
+    background-color:black;
+    color:white;
+    padding: 20px;
+}
 #a2{
 grid-area: a2;
-background-color: crimson;
+
 }
 footer{
 grid-area: ft;
@@ -61,7 +68,30 @@ background-color: black;
 img{
     align-self: center;
 }
-
+#divider{
+    grid-area: d1;
+}
+#divider_2{
+    grid-area: d2;
+}
+#divider_3{
+    grid-area: d3;
+}
+#divider_4{
+    grid-area: d4;
+}
+#Kihon{
+    grid-area: ki;
+}
+#Kata{
+    grid-area: ka;
+}
+#Kumite{
+    grid-area: ku;
+}
+ul{
+    color: white;
+}
 @media screen and (max-width: 600px){
     *{
         box-sizing:border-box;
@@ -71,33 +101,32 @@ img{
     }
     
     body{
-      
-
         background-color: white;
     }
     img{
         width: 100vw;
         height: 80vh;
 }
-h1{
-    color: black;
-}
   
     #wrapper{
         display: grid;
-        background-color: aliceblue;
+        background-color: black;
         grid-template-columns: 100vw;
-        grid-template-rows: 6vh 15vh 50vh 30vh 10vh;
+        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 70vh 15vh 70vh 15vh 50vh 10vh;
         grid-template-areas: 
         "nv"
         "hd"
+        "d1"
+        "i1"
+        "d2"
         "a1"
-        "a1"
+        "d3"
+        "i2"
+        "d4"
         "a2"
         "ft"
         }
         nav{
-        background-color: aqua;
         grid-area: nv; 
         position: fixed;
         left: 0;
@@ -128,18 +157,25 @@ h1{
         transition: left 0.3s;
         box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
         z-index: 10;
-        background-color: blue;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        font-size: x-large;
     }
     .menu-button{
         cursor: pointer;
         display: inline;
+        
     }
     .show{
         left: 0;
     }
-    .menu-button i.material-icons{
-        font-size: 2.5rem;
-    }
+#icon{
+    width: 55px;
+    height: 40px;
+}
 }
 
 

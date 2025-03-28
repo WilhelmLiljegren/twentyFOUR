@@ -1,181 +1,259 @@
-
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    
-}
-#wrapper{
-display: grid;
-background-color: black;
-grid-template-columns: 25vw 25vw 30vw 20vw;
-grid-template-rows: 10vh 15vh 55vh 30vh 10vh;
-grid-gap: 10px;
-grid-template-areas: 
-"hd hd hd nv"
-"hd hd hd nv"
-"i1 i1 a1 a1"
-"a2 a2 i2 i2"
-"ft ft ft ft"
-}
-h1{
-color: white;
-grid-area: hd;
-font-size: xx-large;
-text-align: center;
-background-color: black;
-}
-
-nav{
-background-color: black;
-grid-area: nv;
-}
-img{
-    object-fit: contain;
-}
-
-#i1{
-border-radius: 40%;
-grid-area: i1;
-display: flex;
-align-items: center;
-height: 70vh;
-}
-#i2{
-border-radius: 40%;
-grid-area: i2;
-height: 70vh;
-display: flex;
-align-items: center;
-}
-
-#a1{
-grid-area: a1;
-}
-article{
-    background-color:black;
-    color:white;
-    padding: 20px;
-}
-#a2{
-grid-area: a2;
 
 }
-footer{
-grid-area: ft;
-background-color: black;
+
+#wrapper {
+    display: grid;
+    background-color: black;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 5vh 35vh 15vh 10vh 10vh;
+    grid-template-areas:
+        "nv nv"
+        "hd hd"
+        "d1 hi"
+        "i1 a1"
+        "i1 a1"
+        "i1 d3"
+        "d2 i2"
+        "fi i2"
+        "a2 i2"
+        "a2 d4"
+        "ft ft"
+        "ft ft";
 }
-img{
-    align-self: center;
+
+#Header {
+    color: white;
+    grid-area: hd;
+    font-size: xx-large;
+    text-align: center;
+    background-color: black;
 }
-#divider{
-    grid-area: d1;
-}
-#divider_2{
-    grid-area: d2;
-}
-#divider_3{
-    grid-area: d3;
-}
-#divider_4{
-    grid-area: d4;
-}
-#Kihon{
-    grid-area: ki;
-}
-#Kata{
-    grid-area: ka;
-}
-#Kumite{
-    grid-area: ku;
-}
-ul{
+
+#Historia {
+    grid-area: hi;
+    font-size: larger;
+    text-align: center;
+    background-color: black;
     color: white;
 }
-@media screen and (max-width: 600px){
-    *{
-        box-sizing:border-box;
+
+#Filosofi {
+    grid-area: fi;
+    font-size: larger;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+#a1 {
+    grid-area: a1;
+}
+#a2 {
+    grid-area: a2;
+}
+#i2 {
+    grid-area: i2;
+    justify-self: center;
+    height: 60vh;
+    border-radius: 30%;
+}
+
+#i1 {
+    grid-area: i1;
+    justify-self: center;
+    height: 60vh;
+    border-radius: 30%;
+}
+#wrapper_ki {
+    display: grid;
+    background-color: black;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 5vh 35vh 15vh 10vh 10vh;
+    grid-template-areas:
+        "nv nv"
+        "hd hd"
+        "d1 hi"
+        "i3 a3"
+        "i3 a3"
+        "i3 d3"
+        "d2 i4"
+        "fi i4"
+        "a4 i4"
+        "a4 d4"
+        "ft ft"
+        "ft ft";
+}
+#a3{
+    grid-area: a3;
+}
+#a4{
+    grid-area: a4;
+}
+#i3{
+    grid-area: i3;
+}
+#i4{
+    grid-area: i4;
+}
+nav {
+    grid-area: nv;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+img {
+    object-fit: contain;
+    align-self: center;
+}
+
+article {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+footer {
+    grid-area: ft;
+    background-color: black;
+}
+
+#divider {
+    grid-area: d1;
+    justify-self: center;
+}
+
+#divider_2 {
+    grid-area: d2;
+    justify-self: center;
+}
+
+#divider_3 {
+    grid-area: d3;
+    justify-self: center;
+}
+
+#divider_4 {
+    grid-area: d4;
+    justify-self: center;
+}
+.fade-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 5;
+}
+
+.fade-layer.visible {
+    display: block;
+}
+
+.menu {
+    height: 100vh;
+    width: 80vw;
+    position: fixed;
+    top: 0;
+    left: -90vw;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: x-large;
+}
+.menu-button {
+    cursor: pointer;
+    display: inline;
+}
+.show {
+    left: 0;
+}
+
+#icon {
+    width: 55px;
+    height: 40px;
+}
+.sidor:hover{
+color: crimson;
+font-size: xx-large;
+}
+@media screen and (max-width: 600px) {
+    * {
+        box-sizing: border-box;
         padding: 0px;
         margin: 0;
         row-gap: 5vh;
     }
-    
-    body{
-        background-color: white;
-    }
-    img{
+
+    img {
         width: 100vw;
         height: 80vh;
-}
-  
-    #wrapper{
+    }
+
+    nav {
+        height: 6vh;
+    }
+
+    #wrapper {
         display: grid;
         background-color: black;
         grid-template-columns: 100vw;
-        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 70vh 15vh 70vh 15vh 50vh 10vh;
-        grid-template-areas: 
-        "nv"
-        "hd"
-        "d1"
-        "i1"
-        "d2"
-        "a1"
-        "d3"
-        "i2"
-        "d4"
-        "a2"
-        "ft"
-        }
-        nav{
-        grid-area: nv; 
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 6vh;
-        }
-    
-    .fade-layer{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0,0,0,0.5);
-        display: none;
-        z-index: 5;
+        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 1vh 70vh 15vh 70vh 15vh 1vh 50vh 10vh;
+        grid-template-areas:
+            "nv"
+            "hd"
+            "d1"
+            "i1"
+            "d2"
+            "hi"
+            "a1"
+            "d3"
+            "i2"
+            "d4"
+            "fi"
+            "a2"
+            "ft"
     }
-    .fade-layer.visible{
-        display: block;
+
+    #i1 {
+        grid-area: i1;
+        border-radius: 40%;
+        height: 70vh;
     }
-    .menu{
-        height: 100vh;
-        width: 80vw;
-        position: fixed;
-        top: 0;
-        left: -90vw;
-        transition: left 0.3s;
-        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-        z-index: 10;
+
+    #i2 {
+        height: 70vh;
+        border-radius: 40%;
+    }
+    #wrapper_ki {
+        display: grid;
         background-color: black;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content:center;
-        font-size: x-large;
+        grid-template-columns: 100vw;
+        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 1vh 70vh 15vh 70vh 15vh 1vh 50vh 10vh;
+        grid-template-areas:
+            "nv"
+            "hd"
+            "d1"
+            "i1"
+            "d2"
+            "hi"
+            "a1"
+            "d3"
+            "i2"
+            "d4"
+            "fi"
+            "a2"
+            "ft"
     }
-    .menu-button{
-        cursor: pointer;
-        display: inline;
-        
-    }
-    .show{
-        left: 0;
-    }
-#icon{
-    width: 55px;
-    height: 40px;
-}
-}
 
-
+}

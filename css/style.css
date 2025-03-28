@@ -9,7 +9,7 @@
     display: grid;
     background-color: black;
     grid-template-columns: 50vw 50vw;
-    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 5vh 35vh 15vh 10vh 10vh;
+    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 10vh 10vh 35vh 15vh 10vh 10vh;
     grid-template-areas:
         "nv nv"
         "hd hd"
@@ -26,34 +26,25 @@
 }
 
 #Header {
-    color: white;
     grid-area: hd;
-    font-size: xx-large;
-    text-align: center;
-    background-color: black;
 }
 
 #Historia {
     grid-area: hi;
-    font-size: larger;
-    text-align: center;
-    background-color: black;
-    color: white;
 }
 
 #Filosofi {
     grid-area: fi;
-    font-size: larger;
-    text-align: center;
-    background-color: black;
-    color: white;
 }
+
 #a1 {
     grid-area: a1;
 }
+
 #a2 {
     grid-area: a2;
 }
+
 #i2 {
     grid-area: i2;
     justify-self: center;
@@ -67,43 +58,186 @@
     height: 60vh;
     border-radius: 30%;
 }
+
 #wrapper_ki {
     display: grid;
     background-color: black;
     grid-template-columns: 50vw 50vw;
-    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 5vh 35vh 15vh 10vh 10vh;
+    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 5vh 55vh 30vh 10vh;
     grid-template-areas:
         "nv nv"
-        "hd hd"
-        "d1 hi"
+        "hk hk"
+        "d1 k1"
         "i3 a3"
         "i3 a3"
         "i3 d3"
         "d2 i4"
-        "fi i4"
+        "gt i4"
         "a4 i4"
         "a4 d4"
-        "ft ft"
         "ft ft";
 }
-#a3{
+
+#Header_ki {
+    grid-area: hk;
+}
+
+#k1 {
+    grid-area: k1;
+}
+
+#tekniker {
+    grid-area: gt;
+}
+
+#a3 {
     grid-area: a3;
 }
-#a4{
+
+#a4 {
     grid-area: a4;
 }
-#i3{
+
+#i3 {
     grid-area: i3;
+    justify-self: center;
+    height: 60vh;
+    border-radius: 30%;
 }
-#i4{
+
+#i4 {
     grid-area: i4;
+    justify-self: center;
+    height: 80vh;
+    border-radius: 30%;
 }
+
+#wrapper_ka {
+    display: grid;
+    background-color: black;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 5vh 55vh 30vh 10vh;
+    grid-template-areas:
+        "nv nv"
+        "ha ha"
+        "d1 k2"
+        "i5 a5"
+        "i5 a5"
+        "i5 d3"
+        "d2 i6"
+        "ka i6"
+        "a6 i6"
+        "a6 d4"
+        "ft ft";
+}
+
+#Header_ka {
+    grid-area: ha;
+}
+
+#Kator {
+    grid-area: ka;
+}
+
+#k2 {
+    grid-area: k2;
+}
+
+#i5 {
+    grid-area: i5;
+    justify-self: center;
+    height: 75vh;
+    border-radius: 30%;
+}
+
+#i6 {
+    grid-area: i6;
+    justify-self: center;
+    height: 80vh;
+    border-radius: 30%;
+}
+
+#a5 {
+    grid-area: a5;
+}
+
+#a6 {
+    grid-area: a6;
+}
+
+#wrapper_ku {
+    display: grid;
+    background-color: black;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 5vh 55vh 30vh 10vh;
+    grid-template-areas:
+        "nv nv"
+        "hu hu"
+        "d1 k3"
+        "i7 a7"
+        "i7 a7"
+        "i7 d3"
+        "d2 i8"
+        "fo i8"
+        "a8 i8"
+        "a8 d4"
+        "ft ft";
+}
+
+#Header_ku {
+    grid-area: hu;
+}
+
+#former {
+    grid-area: fo;
+}
+
+#k3 {
+    grid-area: k3;
+}
+
+#i7 {
+    grid-area: i7;
+    justify-self: center;
+    height: 75vh;
+    border-radius: 30%;
+}
+
+#i8 {
+    grid-area: i8;
+    justify-self: center;
+    height: 80vh;
+    border-radius: 30%;
+}
+
+#a7 {
+    grid-area: a7;
+}
+
+#a8 {
+    grid-area: a8;
+}
+
 nav {
     grid-area: nv;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
+}
+
+h1 {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    background-color: black;
+}
+
+h2 {
+    font-size: x-large;
+    text-align: center;
+    background-color: black;
+    color: white;
 }
 
 img {
@@ -116,6 +250,14 @@ article {
     color: white;
     padding: 20px;
 }
+
+ul {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+}
+
 footer {
     grid-area: ft;
     background-color: black;
@@ -140,6 +282,7 @@ footer {
     grid-area: d4;
     justify-self: center;
 }
+
 .fade-layer {
     position: fixed;
     top: 0;
@@ -171,10 +314,12 @@ footer {
     justify-content: space-evenly;
     font-size: x-large;
 }
+
 .menu-button {
     cursor: pointer;
     display: inline;
 }
+
 .show {
     left: 0;
 }
@@ -183,10 +328,17 @@ footer {
     width: 55px;
     height: 40px;
 }
-.sidor:hover{
-color: crimson;
-font-size: xx-large;
+
+.sidor {
+    color: white;
+    text-decoration: none;
 }
+
+.sidor:hover {
+    color: crimson;
+    font-size: xx-large;
+}
+
 @media screen and (max-width: 600px) {
     * {
         box-sizing: border-box;
@@ -235,24 +387,87 @@ font-size: xx-large;
         height: 70vh;
         border-radius: 40%;
     }
+
+    #i3 {
+        border-radius: 40%;
+        height: 70vh;
+    }
+
+    #i4 {
+        height: 80vh;
+        border-radius: 40%;
+    }
+
+    #i5 {
+        border-radius: 40%;
+        height: 70vh;
+    }
+
+    #i6 {
+        height: 80vh;
+        border-radius: 40%;
+    }
+
     #wrapper_ki {
         display: grid;
         background-color: black;
         grid-template-columns: 100vw;
-        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 1vh 70vh 15vh 70vh 15vh 1vh 50vh 10vh;
+        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 1vh 70vh 15vh 70vh 15vh 1vh 75vh 10vh;
         grid-template-areas:
             "nv"
-            "hd"
+            "hk"
             "d1"
-            "i1"
+            "i3"
             "d2"
-            "hi"
-            "a1"
+            "k1"
+            "a3"
             "d3"
-            "i2"
+            "i4"
             "d4"
-            "fi"
-            "a2"
+            "gt"
+            "a4"
+            "ft"
+    }
+
+    #wrapper_ka {
+        display: grid;
+        background-color: black;
+        grid-template-columns: 100vw;
+        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 1vh 70vh 15vh 70vh 15vh 1vh 75vh 10vh;
+        grid-template-areas:
+            "nv"
+            "ha"
+            "d1"
+            "i5"
+            "d2"
+            "k2"
+            "a5"
+            "d3"
+            "i6"
+            "d4"
+            "ka"
+            "a6"
+            "ft"
+    }
+
+    #wrapper_ku {
+        display: grid;
+        background-color: black;
+        grid-template-columns: 100vw;
+        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 1vh 50vh 10vh 70vh 15vh 1vh 85vh 10vh;
+        grid-template-areas:
+            "nv"
+            "hu"
+            "d1"
+            "i7"
+            "d2"
+            "k3"
+            "a7"
+            "d3"
+            "i8"
+            "d4"
+            "fo"
+            "a8"
             "ft"
     }
 

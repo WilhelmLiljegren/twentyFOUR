@@ -2,41 +2,56 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-
+}
+div.fighter{
+background-image: url("../img/street-fighter-ryu-sprite-sheet.png");
+width: 60px;
+height: 100px;
+animation: spinning_kick 3s steps(8) infinite;
 }
 
+@keyframes spinning_kick {
+  from {
+    background-position: 0% -100px;
+  }
+  to {
+    background-position: 100% -100px;
+  }
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+.audiowide-regular {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .funnel-sans {
+    font-family: "Funnel Sans", sans-serif;
+    font-style: normal;
+  }
 #wrapper {
     display: grid;
     background-color: black;
     grid-template-columns: 50vw 50vw;
-    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 10vh 10vh 35vh 15vh 10vh 10vh;
+    grid-template-rows: 10vh 15vh 5vh 20vh 45vh 17vh 10vh 35vh 25vh 40vh;
     grid-template-areas:
         "nv nv"
         "hd hd"
-        "d1 hi"
+        "d1 a1"
         "i1 a1"
         "i1 a1"
         "i1 d3"
         "d2 i2"
-        "fi i2"
         "a2 i2"
         "a2 d4"
-        "ft ft"
         "ft ft";
 }
 
 #Header {
     grid-area: hd;
 }
-
-#Historia {
-    grid-area: hi;
-}
-
-#Filosofi {
-    grid-area: fi;
-}
-
 #a1 {
     grid-area: a1;
 }
@@ -63,16 +78,15 @@
     display: grid;
     background-color: black;
     grid-template-columns: 50vw 50vw;
-    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 5vh 55vh 30vh 10vh;
+    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 55vh 30vh 30vh;
     grid-template-areas:
         "nv nv"
         "hk hk"
-        "d1 k1"
+        "d1 a3"
         "i3 a3"
         "i3 a3"
         "i3 d3"
         "d2 i4"
-        "gt i4"
         "a4 i4"
         "a4 d4"
         "ft ft";
@@ -81,15 +95,6 @@
 #Header_ki {
     grid-area: hk;
 }
-
-#k1 {
-    grid-area: k1;
-}
-
-#tekniker {
-    grid-area: gt;
-}
-
 #a3 {
     grid-area: a3;
 }
@@ -116,16 +121,15 @@
     display: grid;
     background-color: black;
     grid-template-columns: 50vw 50vw;
-    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 5vh 55vh 30vh 10vh;
+    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 55vh 30vh 30vh;
     grid-template-areas:
         "nv nv"
         "ha ha"
-        "d1 k2"
+        "d1 a5"
         "i5 a5"
         "i5 a5"
         "i5 d3"
         "d2 i6"
-        "ka i6"
         "a6 i6"
         "a6 d4"
         "ft ft";
@@ -134,15 +138,6 @@
 #Header_ka {
     grid-area: ha;
 }
-
-#Kator {
-    grid-area: ka;
-}
-
-#k2 {
-    grid-area: k2;
-}
-
 #i5 {
     grid-area: i5;
     justify-self: center;
@@ -156,7 +151,6 @@
     height: 80vh;
     border-radius: 30%;
 }
-
 #a5 {
     grid-area: a5;
 }
@@ -169,16 +163,15 @@
     display: grid;
     background-color: black;
     grid-template-columns: 50vw 50vw;
-    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 5vh 55vh 30vh 10vh;
+    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 75vh 30vh 30vh;
     grid-template-areas:
         "nv nv"
         "hu hu"
-        "d1 k3"
+        "d1 a7"
         "i7 a7"
         "i7 a7"
         "i7 d3"
         "d2 i8"
-        "fo i8"
         "a8 i8"
         "a8 d4"
         "ft ft";
@@ -186,14 +179,6 @@
 
 #Header_ku {
     grid-area: hu;
-}
-
-#former {
-    grid-area: fo;
-}
-
-#k3 {
-    grid-area: k3;
 }
 
 #i7 {
@@ -231,6 +216,7 @@ h1 {
     font-size: xx-large;
     text-align: center;
     background-color: black;
+    font-family: "Audiowide", sans-serif;
 }
 
 h2 {
@@ -238,6 +224,7 @@ h2 {
     text-align: center;
     background-color: black;
     color: white;
+    font-family: "Audiowide", sans-serif;
 }
 
 img {
@@ -249,6 +236,7 @@ article {
     background-color: black;
     color: white;
     padding: 20px;
+    font-family: "Funnel Sans", sans-serif;
 }
 
 ul {
@@ -256,6 +244,7 @@ ul {
     color: white;
     padding: 20px;
     margin: 20px;
+    font-family: "Funnel Sans", sans-serif;
 }
 
 footer {
@@ -304,7 +293,7 @@ footer {
     position: fixed;
     top: 0;
     left: -90vw;
-    transition: left 0.3s;
+    transition: left 3s;
     box-shadow: 10px 0px 21px -10px rgba(0, 0, 0, 0.75);
     z-index: 10;
     background-color: black;
@@ -313,6 +302,7 @@ footer {
     align-items: center;
     justify-content: space-evenly;
     font-size: x-large;
+    font-family: "Funnel Sans", sans-serif;
 }
 
 .menu-button {
@@ -360,19 +350,17 @@ footer {
         display: grid;
         background-color: black;
         grid-template-columns: 100vw;
-        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 1vh 70vh 15vh 70vh 15vh 1vh 50vh 10vh;
+        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 95vh 15vh 70vh 15vh 65vh 10vh;
         grid-template-areas:
             "nv"
             "hd"
             "d1"
             "i1"
             "d2"
-            "hi"
             "a1"
             "d3"
             "i2"
             "d4"
-            "fi"
             "a2"
             "ft"
     }
@@ -412,19 +400,17 @@ footer {
         display: grid;
         background-color: black;
         grid-template-columns: 100vw;
-        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 1vh 70vh 15vh 70vh 15vh 1vh 75vh 10vh;
+        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 70vh 15vh 70vh 15vh 100vh 10vh;
         grid-template-areas:
             "nv"
             "hk"
             "d1"
             "i3"
             "d2"
-            "k1"
             "a3"
             "d3"
             "i4"
             "d4"
-            "gt"
             "a4"
             "ft"
     }
@@ -433,19 +419,17 @@ footer {
         display: grid;
         background-color: black;
         grid-template-columns: 100vw;
-        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 1vh 70vh 15vh 70vh 15vh 1vh 75vh 10vh;
+        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 70vh 15vh 70vh 15vh 95vh 10vh;
         grid-template-areas:
             "nv"
             "ha"
             "d1"
             "i5"
             "d2"
-            "k2"
             "a5"
             "d3"
             "i6"
             "d4"
-            "ka"
             "a6"
             "ft"
     }
@@ -454,19 +438,17 @@ footer {
         display: grid;
         background-color: black;
         grid-template-columns: 100vw;
-        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 1vh 50vh 10vh 70vh 15vh 1vh 85vh 10vh;
+        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 50vh 10vh 70vh 15vh 115vh 10vh;
         grid-template-areas:
             "nv"
             "hu"
             "d1"
             "i7"
             "d2"
-            "k3"
             "a7"
             "d3"
             "i8"
             "d4"
-            "fo"
             "a8"
             "ft"
     }

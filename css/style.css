@@ -79,23 +79,7 @@ body::-webkit-scrollbar {
     height: 60vh;
     border-radius: 30%;
 }
-#wrapper_ki1 {
-    display: grid;
-    background-color: black;
-    grid-template-columns: 50vw 50vw;
-    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 55vh 30vh 30vh;
-    grid-template-areas:
-        "nv nv"
-        "hk hk"
-        "d1 a3"
-        "i3 a3"
-        "i3 a3"
-        "i3 d3"
-        "d2 i4"
-        "a4 i4"
-        "a4 d4"
-        "ft ft";
-}
+
 #wrapper_ki {
     display: grid;
     background-color: black;
@@ -129,34 +113,16 @@ body::-webkit-scrollbar {
     border-radius: 20%;
 }
 
-.links{
-    
-    color: crimson;
-}
+.links {
 
-#wrapper_ka2 {
-    display: grid;
-    background-color: black;
-    grid-template-columns: 50vw 50vw;
-    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 55vh 30vh 30vh;
-    grid-template-areas:
-        "nv nv"
-        "ha ha"
-        "d1 a5"
-        "i5 a5"
-        "i5 a5"
-        "i5 d3"
-        "d2 i6"
-        "a6 i6"
-        "a6 d4"
-        "ft ft";
+    color: crimson;
 }
 
 #wrapper_ka {
     display: grid;
     background-color: black;
     column-gap: 10px;
-    grid-template-columns:24vw 24vw 24vw 24vw; 
+    grid-template-columns: 24vw 24vw 24vw 24vw;
     grid-template-rows: 10vh 15vh 25vh 40vh 45vh 20vh 15vh 30vh 30vh 30vh;
     grid-template-areas:
         "nv nv nv nv"
@@ -167,7 +133,7 @@ body::-webkit-scrollbar {
         "d2 d2 d4 d4"
         "kt kt kt kt"
         "sa yo go te"
-        "sp yp gp tp"       
+        "sp yp gp tp"
         "ft ft ft ft";
 }
 
@@ -228,7 +194,7 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
-#tek{
+#tek {
     grid-area: te;
     color: black;
     background-color: white;
@@ -240,7 +206,7 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
-#tek_s{
+#san_s {
     grid-area: sp;
     width: 24vw;
     display: flex;
@@ -249,7 +215,7 @@ body::-webkit-scrollbar {
     border-bottom-right-radius: 20%;
 }
 
-#yon_y{
+#yon_y {
     grid-area: yp;
     width: 24vw;
     display: flex;
@@ -258,7 +224,7 @@ body::-webkit-scrollbar {
     border-bottom-right-radius: 20%;
 }
 
-#god_g{
+#god_g {
     grid-area: gp;
     width: 24vw;
     display: flex;
@@ -267,7 +233,7 @@ body::-webkit-scrollbar {
     border-bottom-right-radius: 20%;
 }
 
-#tek_t{
+#tek_t {
     grid-area: tp;
     width: 24vw;
     display: flex;
@@ -276,26 +242,10 @@ body::-webkit-scrollbar {
     border-bottom-right-radius: 20%;
 }
 
-#kator{
+#kator {
     grid-area: kt;
 }
-#wrapper_ku1 {
-    display: grid;
-    background-color: black;
-    grid-template-columns: 50vw 50vw;
-    grid-template-rows: 10vh 15vh 5vh 15vh 45vh 17vh 15vh 75vh 30vh 30vh;
-    grid-template-areas:
-        "nv nv"
-        "hu hu"
-        "d1 a7"
-        "i7 a7"
-        "i7 a7"
-        "i7 d3"
-        "d2 i8"
-        "a8 i8"
-        "a8 d4"
-        "ft ft";
-}
+
 #wrapper_ku {
     display: grid;
     background-color: black;
@@ -327,7 +277,8 @@ body::-webkit-scrollbar {
     justify-self: center;
     width: 33vw;
 }
-#i9{
+
+#i9 {
     grid-area: i9;
     width: 33vw;
 }
@@ -482,11 +433,15 @@ footer {
         height: 6vh;
     }
 
+    li {
+        padding-bottom: 15px;
+    }
+
     #wrapper {
         display: grid;
         background-color: black;
         grid-template-columns: 100vw;
-        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 95vh 15vh 70vh 15vh 65vh 10vh;
+        grid-template-rows: 6vh 15vh 6vh 70vh 15vh 95vh 15vh 50vh 15vh 65vh 10vh;
         grid-template-areas:
             "nv"
             "hd"
@@ -513,7 +468,6 @@ footer {
     }
 
     #i3 {
-        border-radius: 40%;
         height: 70vh;
     }
 
@@ -528,64 +482,80 @@ footer {
     }
 
     #i6 {
-        height: 80vh;
+        height: 0vh;
         border-radius: 40%;
     }
+
     #i7 {
         height: 80vh;
         border-radius: 40%;
     }
-    #i8{
+
+    #i8 {
         height: 0vh;
     }
-    #i7{
+
+    #i7 {
         height: 0vh;
     }
-    #i9{
+
+    #i9 {
         height: 0vh;
     }
+
+    #tek_t {
+        height: 0vh;
+    }
+
+    #san_s {
+        height: 0vh;
+    }
+
+    #god_g {
+        height: 0vh;
+    }
+
+    #yon_y {
+        height: 0vh;
+    }
+
+    #space1 {
+        grid-area: s1;
+    }
+
+    #space2 {
+        grid-area: s2;
+    }
+
     #san {
-        grid-area: sa;
         color: white;
         background-color: black;
-        font-size: larger;
-        align-content: center;
-        overflow: auto;
-        text-align: center;
     }
-    
+
     #yon {
-        grid-area: yo;
         color: white;
-        font-size: larger;
-        align-content: center;
-        overflow: auto;
-        text-align: center;
+        background-color: black;
     }
-    
+
     #god {
-        grid-area: go;
         color: white;
-        font-size: larger;
-        align-content: center;
-        overflow: auto;
-        text-align: center;
+        background-color: black;
     }
-    
-    #tek{
-        grid-area: te;
+
+    #tek {
         color: white;
-        font-size: larger;
-        align-content: center;
-        overflow: auto;
-        text-align: center;
+        background-color: black;
     }
-    
+
+    #Header_ku {
+        width: 100vw;
+    }
+
     #wrapper_ki {
         display: grid;
         background-color: black;
         grid-template-columns: 100vw;
-        grid-template-rows: 6vh 15vh 70vh 15vh 70vh 100vh 10vh;
+        grid-template-rows: 6vh 15vh 50vh 15vh 70vh 90vh 1vh;
         grid-template-areas:
             "nv"
             "hk"
@@ -593,35 +563,37 @@ footer {
             "d2"
             "a3"
             "a4"
-            "ft"
+            "ft";
     }
 
     #wrapper_ka {
         display: grid;
+        column-gap: 0;
+        row-gap: 0;
         background-color: black;
-        grid-template-columns: 100vw;
-        grid-template-rows: 6vh 15vh 35vh 10vh 15vh 70vh 15vh 15vh 15vh 15vh 95vh 10vh;
+        grid-template-columns: 2vw 94vw 2vw;
+        grid-template-rows: 6vh 5vh 45vh 10vh 5vh 15vh 15vh 15vh 15vh 10vh 15vh;
         grid-template-areas:
-            "nv"
-            "ha"
-            "a5"
-            "d1"
-            "d2"
-            "kt"
-            "sa"
-            "yo"
-            "go"
-            "te"
-            "d4"
-            "a6"
-            "ft"
+            "s1 nv s2"
+            "s1 ha s2"
+            "s1 a5 s2"
+            "s1 d2 s2"
+            "s1 kt s2"
+            "s1 sa s2"
+            "s1 yo s2"
+            "s1 go s2"
+            "s1 te s2"
+            "s1 d4 s2"
+            "s1 ft s2";
     }
 
     #wrapper_ku {
         display: grid;
+        row-gap: 0;
+        column-gap: 0;
         background-color: black;
         grid-template-columns: 100vw;
-        grid-template-rows: 6vh 15vh 7vh 50vh 15vh 115vh 10vh;
+        grid-template-rows: 6vh 15vh 7vh 40vh 10vh 100vh 10vh;
         grid-template-areas:
             "nv"
             "hu"
